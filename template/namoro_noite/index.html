@@ -3,55 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>MemorixQR ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="estrelas.css">
 </head>
 <body>
 
-  <div class="shooting-star"></div>
-
-  <!-- Estrelas -->
+  <!-- Fundo animado -->
   <div class="stars"></div>
   <div class="stars2"></div>
   <div class="stars3"></div>
+  <div class="shooting-star"></div>
 
-  <!-- Card principal -->
-  <div class="card">
-    <footer class="footer">
-  <img src="logo.png" alt="MemorixQR">
-  <p>Criado com 💙 por <strong>MemorixQR</strong></p>
-</footer>
-    <h1>🌙 Uma lembrança especial</h1>
-    <p>
-      Essa página foi criada especialmente para você.  
-      Que cada estrela represente um momento nosso ✨
-    </p>
-
-    <div class="gallery">
-      <img src="fotos/foto1.jpg">
-      <img src="fotos/foto2.jpg">
-      <img src="fotos/foto3.jpg">
-    </div>
-
-    <button class="share-btn" onclick="sharePage()">
-  🔗 Compartilhar essa lembrança
-    </button>
+  <!-- Conteúdo -->
+  <main class="container">
     
-    <span class="assinatura">Com carinho 💙</span>
-  </div>
+    <!-- Foto grande -->
+    <section class="foto">
+      <img src="fotos/principal.jpg" alt="Foto especial">
+    </section>
+
+    <!-- Texto -->
+    <section class="texto">
+      <h1>🌙 Uma lembrança especial</h1>
+      <p>
+        Essa página foi criada para eternizar um momento único.  
+        Cada detalhe foi pensado com carinho, para que essa memória
+        nunca se perca no tempo ✨
+      </p>
+
+      <button class="share-btn" onclick="sharePage()">
+        🔗 Compartilhar essa lembrança
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <img src="logo.png" alt="MemorixQR">
+    <p>Criado com 💙 por <strong>MemorixQR</strong></p>
+  </footer>
+
 <script>
 function sharePage() {
   if (navigator.share) {
     navigator.share({
       title: 'Uma lembrança especial ✨',
-      text: 'Olha essa página que fizeram pra mim 💙',
+      text: 'Olha essa página incrível 💙',
       url: window.location.href
     });
   } else {
     navigator.clipboard.writeText(window.location.href);
-    alert("Link copiado! Agora é só compartilhar 💫");
+    alert("Link copiado!");
   }
 }
 </script>
+
 </body>
 </html>
