@@ -8,26 +8,33 @@
 body {
   background: radial-gradient(circle at top, #0b1d3a, #020617);
   color: #fff;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* Container principal */
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  padding: 20px;
+/* Container */
+.story {
   max-width: 1200px;
   margin: auto;
-  z-index: 10;
+  padding: 40px 20px;
   position: relative;
+  z-index: 10;
 }
 
-/* Foto */
-.foto img {
-  width: 100%;
-  height: 60vh;
+/* Bloco */
+.bloco {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.bloco.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Imagem */
+.bloco img {
+  width: 50%;
+  height: 320px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 0 40px rgba(79, 172, 254, 0.4);
@@ -36,32 +43,19 @@ body {
 
 /* Texto */
 .texto {
-  animation: slideIn 1.2s ease forwards;
+  width: 50%;
 }
 
-.texto h1 {
+.texto h2 {
   color: #8ecbff;
   margin-bottom: 15px;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .texto p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
-  margin-bottom: 20px;
   color: #e0f2ff;
-}
-
-/* Botão */
-.share-btn {
-  padding: 14px 24px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(90deg, #ff4fa3, #4facfe);
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 0 25px rgba(79, 172, 254, 0.5);
 }
 
 /* Rodapé */
@@ -81,34 +75,25 @@ body {
   color: #b5dcff;
 }
 
-/* Desktop */
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    min-height: 90vh;
+/* Mobile */
+@media (max-width: 768px) {
+  .bloco,
+  .bloco.reverse {
+    flex-direction: column;
   }
 
-  .foto img {
-    height: 70vh;
+  .bloco img,
+  .texto {
+    width: 100%;
   }
 
-  .texto h1 {
-    font-size: 36px;
-  }
-
-  .texto p {
-    font-size: 18px;
+  .bloco img {
+    height: 260px;
   }
 }
 
-/* Animações */
+/* Animação */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
 }
