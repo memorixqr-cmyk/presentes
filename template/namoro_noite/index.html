@@ -9,56 +9,62 @@
 </head>
 <body>
 
-  <!-- Fundo animado -->
+  <!-- Fundo -->
   <div class="stars"></div>
   <div class="stars2"></div>
   <div class="stars3"></div>
   <div class="shooting-star"></div>
 
   <!-- Conteúdo -->
-  <main class="container">
-    
-    <!-- Foto grande -->
-    <section class="foto">
-      <img src="fotos/principal.jpg" alt="Foto especial">
+  <main class="story">
+
+    <section class="bloco">
+      <img src="fotos/foto1.jpg">
+      <div class="texto">
+        <h2>✨ Nosso começo</h2>
+        <p>Foi aqui que tudo começou. Um momento simples que virou inesquecível.</p>
+      </div>
     </section>
 
-    <!-- Texto -->
-    <section class="texto">
-      <h1>🌙 Uma lembrança especial</h1>
-      <p>
-        Essa página foi criada para eternizar um momento único.  
-        Cada detalhe foi pensado com carinho, para que essa memória
-        nunca se perca no tempo ✨
-      </p>
+    <section class="bloco reverse">
+      <img src="fotos/foto2.jpg">
+      <div class="texto">
+        <h2>🌙 Primeiras memórias</h2>
+        <p>Cada detalhe desse dia ficou guardado para sempre no coração.</p>
+      </div>
+    </section>
 
-      <button class="share-btn" onclick="sharePage()">
-        🔗 Compartilhar essa lembrança
-      </button>
+    <section class="bloco">
+      <img src="fotos/foto3.jpg">
+      <div class="texto">
+        <h2>💙 Momentos felizes</h2>
+        <p>Sorrisos, abraços e aquela sensação de que tudo estava no lugar.</p>
+      </div>
+    </section>
+
+    <section class="bloco reverse">
+      <img src="fotos/foto4.jpg">
+      <div class="texto">
+        <h2>🌠 Superações</h2>
+        <p>Nem sempre foi fácil, mas juntos tudo fez sentido.</p>
+      </div>
+    </section>
+
+    <section class="bloco">
+      <img src="fotos/foto5.jpg">
+      <div class="texto">
+        <h2>✨ Para sempre</h2>
+        <p>Que essa história continue sendo escrita com amor e cumplicidade.</p>
+      </div>
     </section>
 
   </main>
 
   <!-- Rodapé -->
   <footer class="footer">
-    <img src="logo.png" alt="MemorixQR">
+    <img src="logo.png">
     <p>Criado com 💙 por <strong>MemorixQR</strong></p>
   </footer>
-
-<script>
-function sharePage() {
-  if (navigator.share) {
-    navigator.share({
-      title: 'Uma lembrança especial ✨',
-      text: 'Olha essa página incrível 💙',
-      url: window.location.href
-    });
-  } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Link copiado!");
-  }
-}
-</script>
 
 </body>
 </html>
