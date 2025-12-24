@@ -25,6 +25,8 @@ body {
   text-align: center;
   box-shadow: 0 0 40px rgba(0, 140, 255, 0.3);
   z-index: 10;
+  animation: cardEnter 1.2s ease forwards;
+  opacity: 0;
 }
 
 .card h1 {
@@ -72,4 +74,14 @@ body {
 .assinatura {
   font-size: 14px;
   color: #b5dcff;
+}
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
