@@ -27,8 +27,25 @@
       <img src="fotos/foto3.jpg">
     </div>
 
+    <button class="share-btn" onclick="sharePage()">
+  🔗 Compartilhar essa lembrança
+    </button>
+    
     <span class="assinatura">Com carinho 💙</span>
   </div>
-
+<script>
+function sharePage() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Uma lembrança especial ✨',
+      text: 'Olha essa página que fizeram pra mim 💙',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copiado! Agora é só compartilhar 💫");
+  }
+}
+</script>
 </body>
 </html>
