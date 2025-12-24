@@ -1,1 +1,28 @@
 
+.stars, .stars2, .stars3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                    radial-gradient(2px 2px at 100px 80px, #fff, transparent),
+                    radial-gradient(1px 1px at 200px 150px, #fff, transparent),
+                    radial-gradient(2px 2px at 300px 200px, #fff, transparent),
+                    radial-gradient(1px 1px at 400px 50px, #fff, transparent);
+  animation: blink 4s infinite alternate;
+}
+
+.stars2 {
+  animation-duration: 6s;
+  opacity: 0.6;
+}
+
+.stars3 {
+  animation-duration: 8s;
+  opacity: 0.4;
+}
+
+@keyframes blink {
+  from { opacity: 0.3; }
+  to   { opacity: 1; }
+}
