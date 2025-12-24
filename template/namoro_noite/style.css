@@ -102,3 +102,48 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(255, 79, 163, 0.7);
 }
+
+.footer {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.footer img {
+  width: 40px;
+  margin-bottom: 5px;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #b5dcff;
+}
+
+.shooting-star {
+  position: absolute;
+  top: -10%;
+  left: 70%;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(180deg, white, transparent);
+  opacity: 0;
+  animation: shoot 6s infinite ease-in-out;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-300px, 400px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
